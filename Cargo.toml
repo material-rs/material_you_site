@@ -1,0 +1,29 @@
+[package]
+name = "material_you_site"
+version = "0.1.0"
+authors = ["al3x alex.vacan.bala@gmail.com"]
+edition = "2021"
+description = "website of material_you"
+homepage = "https://material-rs.github.io"
+readme = "README.md"
+repository = "https://github.com/material-rs/material_you_site.git"
+license = "LGPL-3.0-or-later OR MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+css-in-rust = "0.5"
+wasm-bindgen = "0.2"
+wasm-logger = "0.2"
+yew = "0.19"
+
+[dependencies.material_you]
+path = "../material_you_rs"
+
+[dependencies.web-sys]
+version = "0.3"
+features = []
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3"
